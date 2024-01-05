@@ -20,11 +20,11 @@ class AuthController extends Controller
       'password' => 'required'
     ]);
 
-    if (!auth()->attempt($request->only('email', 'password'), $request->remember)) {
+    if (!auth()->attempt($request->only('email', 'password'))) {
       return back()->with('status', 'Credenciales no válidas');
     }
 
-    return redirect()->route('home');
+    return redirect()->route('admin.index');
   }
 
   public function admin()

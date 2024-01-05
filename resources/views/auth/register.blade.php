@@ -7,7 +7,7 @@
   <a href="{{route("auth.admin")}}" class="bg-blue-700 text-white hover:bg-blue-800 cursor-pointer rounded-lg p-2 text-xl">Administrador</a>
 </div>
 <form class="mt-8 border p-3"
-  action="{{route("auth.admin.store")}}"  
+  action="{{route("register.store")}}"  
   method="POST"
   >
   @csrf
