@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\auth\AuthController;
 use App\Http\Controllers\home\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get("/", [HomeController::class, "index"])->name("home.index");
+
+Route::get("/login/students", [AuthController::class, "index"])->name("auth.students");
+Route::get("/login/admin", [AuthController::class, "admin"])->name("auth.admin");

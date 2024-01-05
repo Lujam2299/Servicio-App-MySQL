@@ -21,23 +21,7 @@
         />
       </div>
       <div class="w-2/3 p-4">
-        <div class="flex justify-center gap-3">
-          <a  class="bg-blue-700 text-white hover:bg-blue-800 cursor-pointer rounded-lg p-2 text-xl">Alumno - CESA</a>
-          <a class="bg-blue-700 text-white hover:bg-blue-800 cursor-pointer rounded-lg p-2 text-xl">Docente</a>
-          <a  class="bg-blue-700 text-white hover:bg-blue-800 cursor-pointer rounded-lg p-2 text-xl">Administrador</a>
-        </div>
-        <div class="mt-8 border p-3">
-          <label class="block text-lg font-medium text-blue-700" for="controlNumber">
-            Número de control
-          </label>
-          <Input class="mt-2 mb-4 border-blue-300 p-2 w-full rounded-md" id="controlNumber" placeholder="19690395" type="text" />
-          <label class="block text-lg font-medium text-blue-700" for="password">
-            Contraseña
-          </label>
-          <Input class="mt-2 mb-4 border-blue-300 p-2 w-full rounded-md" id="password" placeholder="••••••" type="password" />
-          <Button class="w-full bg-blue-700 text-white hover:bg-blue-800 rounded-lg p-2 text-lg">Iniciar sesión</Button>
-        </div>
-      </div>
+        @yield('content')
     </div>
   </div>
 </body>
