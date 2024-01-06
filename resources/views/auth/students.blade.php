@@ -3,8 +3,8 @@
 @section("content")
 <div class="flex justify-center gap-3">
   <a href="{{route("auth.students")}}" class="bg-blue-700 text-white hover:bg-blue-800 cursor-pointer rounded-lg p-2 text-xl">Alumno - CESA</a>
-  <a class="bg-blue-700 text-white hover:bg-blue-800 cursor-pointer rounded-lg p-2 text-xl">Docente</a>
-  <a href="{{route("auth.admin")}}" class="bg-blue-700 text-white hover:bg-blue-800 cursor-pointer rounded-lg p-2 text-xl">Administrador</a>
+  <a class="text-black border border-blue-600 cursor-pointer rounded-lg p-2 text-xl">Docente</a>
+  <a href="{{route("auth.admin")}}" class="text-black border border-blue-600 cursor-pointer rounded-lg p-2 text-xl">Administrador</a>
 </div>
 <form
   class="mt-8 border p-3"
