@@ -46,4 +46,8 @@ class AuthController extends Controller
 
     return redirect()->route('admin.index');
   }
+  public function docenteIndex()
+  {
+    return view('auth.docente');
+  }
 }

@@ -6,6 +6,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\auth\AuthController;
 use App\Http\Controllers\home\HomeController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\UserDashboardController;
+use App\Http\Controllers\ReservationsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +23,7 @@ use App\Http\Controllers\RegisterController;
 Route::get("/", [HomeController::class, "index"])->name("home.index");
 
 Route::get("/login/students", [AuthController::class, "index"])->name("auth.students");
+Route::get("/login/docente", [AuthController::class, "docenteIndex"])->name("auth.docente");
 Route::get("/login/admin", [AuthController::class, "adminIndex"])->name("auth.admin");
 
 Route::post("/login/admin", [AuthController::class, "admin"])->name("auth.admin.store");
@@ -29,3 +32,10 @@ Route::get("/admin", [AdminController::class, "index"])->name("admin.index");
 
 Route::get("/register", [RegisterController::class, "index"])->name("register.index");
 Route::post("/register", [AdminRegisterController::class, "store"])->name("register.store");
+
+//Route::get('/dashboard', [UserDashboardController::class, "showDashboard"]);
+Route::get('/dashboard', [UserDashboardController::class, "showDashboard"])->name('user.main');
+
+Route::get('/dashboard/reservations/1', [ReservationsController::class, 'rafapinaSchedule'])->name('reservations.schedule');
+Route::get('/dashboard/reservations/2', [ReservationsController::class, 'auditorioSchedule'])->name('reservations.auditorio');
+Route::get('/dashboard/reservations/3', [ReservationsController::class, 'exdirectoresSchedule'])->name('reservations.exdirectores');
