@@ -57,6 +57,13 @@
             </div>
             <div class="flex flex-col mt-6">
               <div class="flex flex-col mt-6">
+              <h1 class="text-3xl font-semibold text-gray-700 dark:text-gray-200">Tablero</h1>
+            </div>
+            <div class="flex flex-col mt-6">
+              <div class="flex flex-col mt-6">
+                <div class="flex items-center justify-between text-gray-500 dark:text-gray-400">
+                  <h2 class="text-lg">Reserva de Sala de Conferencias</h2>
+                </div>
                 <div class="flex flex-col mt-4">
                   <span class="text-lg text-gray-700 dark:text-gray-200">Seleccionar la Sala a Reservar</span>
                   <!-- Calendario
