@@ -18,13 +18,13 @@
 <body>
     <div class="flex flex-col h-screen bg-gray-100 dark:bg-gray-900">
         <header class="flex items-center justify-between px-6 py-4 bg-white shadow-md dark:bg-gray-800">
-          <div class="text-2xl font-semibold text-gray-700 dark:text-gray-200">Panel de Reservaciones</div>
-          <div class="flex items-center space-x-3">
+            <div class="text-2xl font-semibold text-gray-700 dark:text-gray-200">Panel de Reservaciones</div>
+            <div class="flex items-center space-x-3">
             <span class="text-gray-700 dark:text-gray-200">Hola, Usuario</span>
             <Button class="text-sm" variant="outline">
-              Cerrar Sesión
+                Cerrar Sesión
             </Button>
-          </div>
+            </div>
         </header>
         <main class="flex flex-1 overflow-auto">
           <nav class="flex flex-col bg-white shadow-lg dark:bg-gray-800 w-64">
@@ -75,7 +75,7 @@
 
                   <div class="flex space-x-4 overflow-x-auto">
                     <div class="card bg-dark flex-shrink-0 mx-2">
-                        <a href="">
+                        <a href="{{route("reservations.schedule")}}">
                         <img
                         alt="Auditorio"
                         class="w-full logo rounded-lg"
@@ -89,7 +89,7 @@
                     </a>
                     </div>
                     <div class="card bg-dark flex-shrink-0 mx-2">
-                        <a href="">
+                        <a href="{{route("reservations.exdirectores")}}">
                         <img
                         alt="Ex-directores"
                         class="w-full logo rounded-lg"
@@ -103,7 +103,7 @@
                     </a>
                     </div>
                     <div class="card bg-dark flex-shrink-0">
-                        <a href="">
+                        <a href="{{route("reservations.auditorio")}}">
                         <img
                         alt="Auditorio"
                         class="w-full logo rounded-lg"
