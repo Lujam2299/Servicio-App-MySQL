@@ -35,11 +35,14 @@ Route::post("/register", [AdminRegisterController::class, "store"])->name("regis
 
 //Route::get('/dashboard', [UserDashboardController::class, "showDashboard"]);
 Route::get('/dashboard', [UserDashboardController::class, "showDashboard"])->name('user.main');
+
 Route::get('/dashboard/solicitudes', [UserDashboardController::class, "showSolicitudes"])->name('user.solicitudes');
 Route::get('/dashboard/configuration', [UserDashboardController::class, "showConfig"])->name('user.configuration');
+
+Route::get('/dashboard', [UserDashboardController::class, "showDashboard"]);
+
 
 Route::get('/dashboard/reservations/1', [ReservationsController::class, 'rafapinaSchedule'])->name('reservations.schedule');
 Route::get('/dashboard/reservations/2', [ReservationsController::class, 'auditorioSchedule'])->name('reservations.auditorio');
 Route::get('/dashboard/reservations/3', [ReservationsController::class, 'exdirectoresSchedule'])->name('reservations.exdirectores');
-
 
