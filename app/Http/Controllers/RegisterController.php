@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class RegisterController extends Controller
 {
@@ -23,7 +24,7 @@ class RegisterController extends Controller
     // store user
     User::create([
       'email' => $request->email,
-      'password' => bcrypt($request->password),
+      'password' => Hash::make($request->password),
     ]);
 
     // sign the user in
