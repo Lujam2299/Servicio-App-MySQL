@@ -5,9 +5,6 @@
   <h1 class="text-3xl font-semibold text-gray-700 dark:text-gray-200">Formulario de Usuarios</h1>
 </div>
 <form class="flex flex-col mt-6 w-full md:w-1/2" method="POST" action="{{route('admin.create-user.store')}}">
-    @csrf
-    <div class="flex items-center justify-between text-gray-500 dark:text-gray-400">
-<form class="flex flex-col mt-6 w-full md:w-1/2" method="POST" action="{{route('admin.create-user.store')}}">
   @csrf
   <div class="flex items-center justify-between text-gray-500 dark:text-gray-400">
     <h2 class="text-lg">Información del Usuario</h2>
