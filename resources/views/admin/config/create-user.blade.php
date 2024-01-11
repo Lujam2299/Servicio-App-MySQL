@@ -6,6 +6,9 @@
 </div>
 <form class="flex flex-col mt-6 w-full md:w-1/2">
     <div class="flex items-center justify-between text-gray-500 dark:text-gray-400">
+<form class="flex flex-col mt-6 w-full md:w-1/2" method="POST" action="{{route('admin.create-user.store')}}">
+  @csrf
+  <div class="flex items-center justify-between text-gray-500 dark:text-gray-400">
     <h2 class="text-lg">Información del Usuario</h2>
   </div>
   <div class="flex flex-col mt-4">
