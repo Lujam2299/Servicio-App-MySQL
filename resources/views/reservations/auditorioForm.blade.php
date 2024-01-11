@@ -53,7 +53,6 @@
                 <span class="mx-4 font-medium">Configuraciones</span>
               </a>
               <a class="mt-3 flex items-center py-2 px-4 text-gray-600 rounded-md dark:text-gray-400" href="#">
-
                 <span class="mx-4 font-medium">Mis solicitudes</span>
               </a>
             </nav>

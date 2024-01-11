@@ -49,5 +49,7 @@ Route::get('/dashboard/reservations/2', [ReservationsController::class, 'auditor
 Route::get('/dashboard/reservations/3', [ReservationsController::class, 'exdirectoresSchedule'])->name('reservations.exdirectores');
 
 
+
 Route::get('/admin/create-user', [CreateUserController::class, 'index'])->name('admin.create-user');
+
 
