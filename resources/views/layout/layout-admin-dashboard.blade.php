@@ -52,28 +52,7 @@
         </nav>
       </nav>
       <div class="flex flex-col flex-1 p-6 overflow-hidden">
-        <div class="flex items-center justify-between">
-          <h1 class="text-3xl font-semibold text-gray-700 dark:text-gray-200">Tablero</h1>
-        </div>
-        <div class="flex flex-col mt-6">
-          <div class="flex flex-col mt-6">
-            <div class="flex items-center justify-between text-gray-500 dark:text-gray-400">
-              <h2 class="text-lg">Reserva de Sala de Conferencias</h2>
-            </div>
-            <div class="flex flex-col mt-4">
-              <span class="text-lg text-gray-700 dark:text-gray-200">Seleccionar Fecha</span>
-              <div class="flex mt-2 text-sm text-gray-600 dark:text-gray-400">
-                <Input
-                  class="w-full mt-2 p-2 border border-gray-300 rounded-md dark:border-gray-800 dark:bg-gray-700 dark:text-gray-300"
-                  type="date"
-                />
-                <Button class="ml-2" variant="solid">
-                  Reservar
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
+        @yield('content-admin-dashboard')
       </div>
     </main>
   </div>
