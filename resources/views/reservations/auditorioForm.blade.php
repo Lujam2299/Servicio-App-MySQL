@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 573e5f7d7ac1d1243d94d1294dc368189b8a12ce
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -41,11 +45,19 @@
 
                 <span class="mx-4 font-medium">Inicio</span>
               </a>
+<<<<<<< HEAD
               <a class="mt-3 flex items-center py-2 px-4 text-gray-600 rounded-md dark:text-gray-400" href="{{route("user.configuration")}}">
 
                 <span class="mx-4 font-medium">Configuraciones</span>
               </a>
               <a class="mt-3 flex items-center py-2 px-4 text-gray-600 rounded-md dark:text-gray-400" href="{{route("user.solicitudes")}}">
+=======
+              <a class="mt-3 flex items-center py-2 px-4 text-gray-600 rounded-md dark:text-gray-400" href="#">
+
+                <span class="mx-4 font-medium">Configuraciones</span>
+              </a>
+              <a class="mt-3 flex items-center py-2 px-4 text-gray-600 rounded-md dark:text-gray-400" href="#">
+>>>>>>> 573e5f7d7ac1d1243d94d1294dc368189b8a12ce
 
                 <span class="mx-4 font-medium">Mis solicitudes</span>
               </a>
