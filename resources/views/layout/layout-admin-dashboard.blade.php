@@ -27,13 +27,15 @@
         </div>
         <nav class="mt-10 px-6 ">
           <a
-            class="mt-3 flex items-center py-2 px-4 text-gray-700 bg-gray-200 rounded-md dark:bg-gray-700 dark:text-gray-200"
+            class="mt-3 flex items-center py-2 px-4 text-gray-700 rounded-md dark:bg-gray-700 dark:text-gray-200"
             href="#"
           >
             
             <span class="mx-4 font-medium">Inicio</span>
           </a>
-          <a class="mt-3 flex items-center py-2 px-4 text-gray-600 rounded-md dark:text-gray-400" href="#">
+          <a
+            href="{{route('admin.create-user')}}"
+            class="mt-3 flex items-center py-2 px-4 text-gray-600 rounded-md dark:text-gray-400" href="#">
             
             <span class="mx-4 font-medium">Usuarios</span>
           </a>
