@@ -33,6 +33,6 @@ class RegisterController extends Controller
     auth()->attempt($request->only('control_number', 'password'));
 
     // redirect
-    return redirect()->route('auth.admin');
+    return redirect()->route('home.index');
   }
 }

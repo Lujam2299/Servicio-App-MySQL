@@ -51,5 +51,4 @@ Route::get('/dashboard/reservations/3', [ReservationsController::class, 'exdirec
 
 
 Route::get('/admin/create-user', [CreateUserController::class, 'index'])->name('admin.create-user');
-
-
+Route::post('/admin/create-user', [RegisterController::class, 'store'])->name('admin.create-user.store');
