@@ -27,13 +27,15 @@
         </div>
         <nav class="mt-10 px-6 ">
           <a
-            class="mt-3 flex items-center py-2 px-4 text-gray-700 bg-gray-200 rounded-md dark:bg-gray-700 dark:text-gray-200"
+            class="mt-3 flex items-center py-2 px-4 text-gray-700 rounded-md dark:bg-gray-700 dark:text-gray-200"
             href="#"
           >
             
             <span class="mx-4 font-medium">Inicio</span>
           </a>
-          <a class="mt-3 flex items-center py-2 px-4 text-gray-600 rounded-md dark:text-gray-400" href="#">
+          <a
+            href="{{route('admin.create-user')}}"
+            class="mt-3 flex items-center py-2 px-4 text-gray-600 rounded-md dark:text-gray-400" href="#">
             
             <span class="mx-4 font-medium">Usuarios</span>
           </a>
@@ -52,28 +54,7 @@
         </nav>
       </nav>
       <div class="flex flex-col flex-1 p-6 overflow-hidden">
-        <div class="flex items-center justify-between">
-          <h1 class="text-3xl font-semibold text-gray-700 dark:text-gray-200">Tablero</h1>
-        </div>
-        <div class="flex flex-col mt-6">
-          <div class="flex flex-col mt-6">
-            <div class="flex items-center justify-between text-gray-500 dark:text-gray-400">
-              <h2 class="text-lg">Reserva de Sala de Conferencias</h2>
-            </div>
-            <div class="flex flex-col mt-4">
-              <span class="text-lg text-gray-700 dark:text-gray-200">Seleccionar Fecha</span>
-              <div class="flex mt-2 text-sm text-gray-600 dark:text-gray-400">
-                <Input
-                  class="w-full mt-2 p-2 border border-gray-300 rounded-md dark:border-gray-800 dark:bg-gray-700 dark:text-gray-300"
-                  type="date"
-                />
-                <Button class="ml-2" variant="solid">
-                  Reservar
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
+        @yield('content-admin-dashboard')
       </div>
     </main>
   </div>

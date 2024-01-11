@@ -17,18 +17,20 @@ class RegisterController extends Controller
   {
     // validation
     $this->validate($request, [
+      'control_number' => 'required|max:255',
       'email' => 'required|email|max:255',
       'password' => 'required',
     ]);
 
     // store user
     User::create([
+      'control_number' => $request->control_number,
       'email' => $request->email,
-      'password' => bcrypt($request->password),
+      'password' => Hash::make($request->password),
     ]);
 
     // sign the user in
-    auth()->attempt($request->only('email', 'password'));
+    auth()->attempt($request->only('control_number', 'password'));
 
     // redirect
     return redirect()->route('auth.admin');
