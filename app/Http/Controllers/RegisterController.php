@@ -24,12 +24,13 @@ class RegisterController extends Controller
 
     // store user
     User::create([
+      'control_number' => $request->control_number,
       'email' => $request->email,
       'password' => Hash::make($request->password),
     ]);
 
     // sign the user in
-    auth()->attempt($request->only('email', 'password'));
+    auth()->attempt($request->only('control_number', 'password'));
 
     // redirect
     return redirect()->route('auth.admin');
