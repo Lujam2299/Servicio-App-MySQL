@@ -36,12 +36,8 @@ Route::post("/register", [AdminRegisterController::class, "store"])->name("regis
 
 //Route::get('/dashboard', [UserDashboardController::class, "showDashboard"]);
 Route::get('/dashboard', [UserDashboardController::class, "showDashboard"])->name('user.main');
-
 Route::get('/dashboard/solicitudes', [UserDashboardController::class, "showSolicitudes"])->name('user.solicitudes');
 Route::get('/dashboard/configuration', [UserDashboardController::class, "showConfig"])->name('user.configuration');
-
-Route::get('/dashboard', [UserDashboardController::class, "showDashboard"]);
-
 
 
 Route::get('/dashboard/reservations/1', [ReservationsController::class, 'rafapinaSchedule'])->name('reservations.schedule');
@@ -49,6 +45,10 @@ Route::get('/dashboard/reservations/2', [ReservationsController::class, 'auditor
 Route::get('/dashboard/reservations/3', [ReservationsController::class, 'exdirectoresSchedule'])->name('reservations.exdirectores');
 
 
+Route::get('/admin/create-user', [CreateUserController::class, 'index'])->name('admin.create-user');
+Route::post('/admin/create-user', [RegisterController::class, 'store'])->name('admin.create-user.store');
+
 
 Route::get('/admin/create-user', [CreateUserController::class, 'index'])->name('admin.create-user');
 Route::post('/admin/create-user', [RegisterController::class, 'store'])->name('admin.create-user.store');
+

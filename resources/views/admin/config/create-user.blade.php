@@ -4,8 +4,12 @@
 <div class="flex items-center justify-center w-full md:w-1/2 mt-5 p-5">
   <h1 class="text-3xl font-semibold text-gray-700 dark:text-gray-200">Formulario de Usuarios</h1>
 </div>
+<<<<<<< HEAD
+<form class="flex flex-col mt-6 w-full md:w-1/2">
+=======
 <form class="flex flex-col mt-6 w-full md:w-1/2" method="POST" action="{{route('admin.create-user.store')}}">
   @csrf
+>>>>>>> 573e5f7d7ac1d1243d94d1294dc368189b8a12ce
   <div class="flex items-center justify-between text-gray-500 dark:text-gray-400">
     <h2 class="text-lg">Información del Usuario</h2>
   </div>

@@ -10,7 +10,6 @@ class UserDashboardController extends Controller
     {
         return view('usersDashboard');
     }
-
     public function showSolicitudes()
     {
         return view('usersSolicitudes');
@@ -19,5 +18,4 @@ class UserDashboardController extends Controller
     {
         return view('userConfiguration');
     }
-
 }

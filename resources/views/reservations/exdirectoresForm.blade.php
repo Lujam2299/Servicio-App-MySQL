@@ -41,18 +41,11 @@
 
                 <span class="mx-4 font-medium">Inicio</span>
               </a>
-
               <a class="mt-3 flex items-center py-2 px-4 text-gray-600 rounded-md dark:text-gray-400" href="{{route("user.configuration")}}">
 
                 <span class="mx-4 font-medium">Configuraciones</span>
               </a>
               <a class="mt-3 flex items-center py-2 px-4 text-gray-600 rounded-md dark:text-gray-400" href="{{route("user.solicitudes")}}">
-              <a class="mt-3 flex items-center py-2 px-4 text-gray-600 rounded-md dark:text-gray-400" href="#">
-
-                <span class="mx-4 font-medium">Configuraciones</span>
-              </a>
-              <a class="mt-3 flex items-center py-2 px-4 text-gray-600 rounded-md dark:text-gray-400" href="#">
-
                 <span class="mx-4 font-medium">Mis solicitudes</span>
               </a>
             </nav>
