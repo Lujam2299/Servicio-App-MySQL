@@ -7,3 +7,11 @@
 body {
     font-family: 'Open Sans Variable', sans-serif;
 }
+.image-container img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+.card {
+    margin-right: 10px;
+}
