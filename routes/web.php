@@ -36,22 +36,19 @@ Route::post("/register", [AdminRegisterController::class, "store"])->name("regis
 
 //Route::get('/dashboard', [UserDashboardController::class, "showDashboard"]);
 Route::get('/dashboard', [UserDashboardController::class, "showDashboard"])->name('user.main');
-<<<<<<< HEAD
 Route::get('/dashboard/solicitudes', [UserDashboardController::class, "showSolicitudes"])->name('user.solicitudes');
 Route::get('/dashboard/configuration', [UserDashboardController::class, "showConfig"])->name('user.configuration');
-=======
 
-Route::get('/dashboard', [UserDashboardController::class, "showDashboard"]);
-
->>>>>>> 573e5f7d7ac1d1243d94d1294dc368189b8a12ce
 
 Route::get('/dashboard/reservations/1', [ReservationsController::class, 'rafapinaSchedule'])->name('reservations.schedule');
 Route::get('/dashboard/reservations/2', [ReservationsController::class, 'auditorioSchedule'])->name('reservations.auditorio');
 Route::get('/dashboard/reservations/3', [ReservationsController::class, 'exdirectoresSchedule'])->name('reservations.exdirectores');
 
-<<<<<<< HEAD
 
-=======
 Route::get('/admin/create-user', [CreateUserController::class, 'index'])->name('admin.create-user');
 Route::post('/admin/create-user', [RegisterController::class, 'store'])->name('admin.create-user.store');
->>>>>>> 573e5f7d7ac1d1243d94d1294dc368189b8a12ce
+
+
+Route::get('/admin/create-user', [CreateUserController::class, 'index'])->name('admin.create-user');
+Route::post('/admin/create-user', [RegisterController::class, 'store'])->name('admin.create-user.store');
+
