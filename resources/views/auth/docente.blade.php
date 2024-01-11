@@ -20,7 +20,11 @@
     Contraseña
   </label>
   <Input class="mt-2 mb-4 border-blue-300 p-2 w-full rounded-md" id="password" name="password" placeholder="••••••" type="password" />
+
+  <input type="submit" value="Iniciar Sesión" class="w-full bg-blue-700 text-white hover:bg-blue-800 rounded-lg p-2 text-lg">
+
   <input type="submit" value="Iniciar Sesión" class="w-full bg-blue-700 text-white cursor-pointer hover:bg-blue-800 rounded-lg p-2 text-lg">
+
 </form>
 </div>
 @endsection

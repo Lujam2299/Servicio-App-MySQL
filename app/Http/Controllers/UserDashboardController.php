@@ -10,4 +10,14 @@ class UserDashboardController extends Controller
     {
         return view('usersDashboard');
     }
+
+    public function showSolicitudes()
+    {
+        return view('usersSolicitudes');
+    }
+    public function showConfig()
+    {
+        return view('userConfiguration');
+    }
+
 }
