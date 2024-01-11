@@ -1,7 +1,7 @@
 @extends("layout.layout")
 
 @section("content")
-<h2 class="text-black "><b>SISTEMA DE GESTION DE ESTANCIAS</b></h2><br>
+<h2 class="text-black"><b>SISTEMA DE GESTION DE ESTANCIAS</b></h2><br>
 <div class="flex justify-center gap-3">
   <a href="{{route("auth.students")}}" class="text-black border border-blue-600 cursor-pointer rounded-lg p-2 text-xl">Alumno - CESA</a>
   <a  href="{{route("auth.docente")}}" class="bg-blue-700 text-white hover:bg-blue-800 cursor-pointer rounded-lg p-2 text-xl">Docente</a>
@@ -22,8 +22,6 @@
   <Input class="mt-2 mb-4 border-blue-300 p-2 w-full rounded-md" id="password" name="password" placeholder="••••••" type="password" />
 
   <input type="submit" value="Iniciar Sesión" class="w-full bg-blue-700 text-white hover:bg-blue-800 rounded-lg p-2 text-lg">
-
-  <input type="submit" value="Iniciar Sesión" class="w-full bg-blue-700 text-white cursor-pointer hover:bg-blue-800 rounded-lg p-2 text-lg">
 
 </form>
 </div>
