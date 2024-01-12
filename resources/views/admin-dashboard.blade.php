@@ -49,6 +49,7 @@
 
                 <span class="mx-4 font-medium">Solicitudes</span>
             </a>
+
             </nav>
         </nav>
         <div class="flex flex-col flex-1 p-6 overflow-hidden">
