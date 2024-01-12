@@ -36,6 +36,6 @@ class ReservationsController extends Controller
             'status' => 1, // Estado "sin responder"
         ]);
 
-        return redirect()->route('user.main')->with('success', 'Reserva realizada con éxito');
+        return redirect()->route('user.reservation')->with('success', 'Reserva realizada con éxito');
     }
 }

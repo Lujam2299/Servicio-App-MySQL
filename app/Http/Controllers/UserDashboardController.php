@@ -18,4 +18,9 @@ class UserDashboardController extends Controller
     {
         return view('userConfiguration');
     }
+    public function reservationSuccessful()
+    {
+        return view('/reservations/successreservation');
+    }
+
 }

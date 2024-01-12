@@ -55,5 +55,5 @@ Route::get('/admin/create-user', [CreateUserController::class, 'index'])->name('
 Route::post('/admin/create-user', [RegisterController::class, 'store'])->name('admin.create-user.store');
 
 Route::post('/reservations/store', [ReservationsController::class, 'store'])->name('reservations.store');
-Route::get('/success', [UserDashboardController::class, 'showDashboard'])->name('user.main');
+Route::get('/dashboard/reservation', [UserDashboardController::class, 'reservationSuccessful'])->name('user.reservation');
 
