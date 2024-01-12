@@ -75,21 +75,25 @@
                     </div>
                 </div>
                 </div>
-
+                <form action="{{ route('reservations.store') }}" method="post">
+                    @csrf
                     <div class="flex mt-2 text-sm text-gray-600 dark:text-gray-400 flex-col">
                     <Input
                       class="w-full mt-2 p-2 border border-gray-300 rounded-md dark:border-gray-800 dark:bg-gray-700 dark:text-gray-300"
                       type="date"
+                      name="reservation_date"
                     />
                     <br>
                     <textarea
                         class="w-full mt-2 p-2 border border-gray-300 rounded-md dark:border-gray-800 dark:bg-gray-700 dark:text-gray-300"
                         placeholder="Especificaciones de reservación (Ordenamiento específico de sillas, limpieza, etc.)"
-                    ></textarea>
+                        name="reservation_message"
+                        ></textarea>
                     <Button class="ml-2" variant="solid">
                       Reservar
                     </Button>
                   </div>
+                </form>
               </div>
             </div>
           </div>
