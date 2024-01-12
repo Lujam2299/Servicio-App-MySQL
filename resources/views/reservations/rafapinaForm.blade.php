@@ -21,9 +21,9 @@
             <div class="text-2xl font-semibold text-gray-700 dark:text-gray-200">Panel de Reservaciones</div>
             <div class="flex items-center space-x-3">
             <span class="text-gray-700 dark:text-gray-200">Hola, Usuario</span>
-            <Button class="text-sm" variant="outline">
+            <!--<Button class="text-sm" variant="outline">
                 Cerrar Sesión
-            </Button>
+            </Button>-->
             </div>
         </header>
         <main class="flex flex-1 overflow-auto">
@@ -48,6 +48,9 @@
               <a class="mt-3 flex items-center py-2 px-4 text-gray-600 rounded-md dark:text-gray-400" href="{{route("user.solicitudes")}}">
                 <span class="mx-4 font-medium">Mis solicitudes</span>
               </a>
+              <a href="{{ route('home.index') }}" class="mt-3 flex items-center py-2 px-4 text-gray-600 rounded-md dark:text-gray-400">
+                <span class="mx-4 font-medium">Cerrar Sesión</span>
+            </a>
             </nav>
           </nav>
           <div class="flex flex-col flex-1 p-6 overflow-hidden">
@@ -84,9 +87,9 @@
                             />
                     <div class="flex mt-2 text-sm text-gray-600 dark:text-gray-400 flex-col">
                     <Input
-                      class="w-full mt-2 p-2 border border-gray-300 rounded-md dark:border-gray-800 dark:bg-gray-700 dark:text-gray-300"
-                      type="date"
-                      name="reservation_date"
+                        class="w-full mt-2 p-2 border border-gray-300 rounded-md dark:border-gray-800 dark:bg-gray-700 dark:text-gray-300"
+                        type="date"
+                        name="reservation_date"
                     />
                     <br>
                     <textarea

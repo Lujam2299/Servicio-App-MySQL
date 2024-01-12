@@ -21,9 +21,9 @@
             <div class="text-2xl font-semibold text-gray-700 dark:text-gray-200">Panel de Reservaciones</div>
             <div class="flex items-center space-x-3">
             <span class="text-gray-700 dark:text-gray-200">Hola, Usuario</span>
-            <Button class="text-sm" variant="outline">
+            <!--<Button class="text-sm" variant="outline">
                 Cerrar Sesión
-            </Button>
+            </Button>-->
             </div>
         </header>
         <main class="flex flex-1 overflow-auto">
@@ -49,6 +49,10 @@
 
                 <span class="mx-4 font-medium">Mis solicitudes</span>
               </a>
+
+            <a href="{{ route('home.index') }}" class="mt-3 flex items-center py-2 px-4 text-gray-600 rounded-md dark:text-gray-400">
+                <span class="mx-4 font-medium">Cerrar Sesión</span>
+            </a>
             </nav>
           </nav>
           <div class="flex flex-col flex-1 p-6 overflow-hidden">
@@ -92,11 +96,11 @@
                         </tbody>
                     </table>
                 </div>
-              </div>
+                </div>
             </div>
-          </div>
+            </div>
         </main>
-      </div>
+    </div>
 <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
