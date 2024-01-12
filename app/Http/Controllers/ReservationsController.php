@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Reservation;
+use Illuminate\Support\Facades\Auth;
+
 
 class ReservationsController extends Controller
 {
@@ -28,8 +30,10 @@ class ReservationsController extends Controller
             'reservation_date' => 'required|date',
             'reservation_message' => 'nullable|string',
         ]);
+        $userEmail = Auth::user()->email;
 
         Reservation::create([
+            'email' => $userEmail,
             'nombre_sala' => $request->input('nombre_sala'),
             'date' => $request->input('reservation_date'),
             'message' => $request->input('reservation_message'),

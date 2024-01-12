@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('reservations', function (Blueprint $table) {
             $table->id();
+            $table->string('email');
             $table->string('nombre_sala');
             $table->date('date');
             $table->text('message')->nullable();
