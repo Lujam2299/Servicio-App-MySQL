@@ -24,11 +24,13 @@ class ReservationsController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'nombre_sala' => 'required|string',
             'reservation_date' => 'required|date',
-            'reservation_message' => 'required|string',
+            'reservation_message' => 'nullable|string',
         ]);
 
         Reservation::create([
+            'nombre_sala' => $request->input('nombre_sala'),
             'date' => $request->input('reservation_date'),
             'message' => $request->input('reservation_message'),
             'status' => 1, // Estado "sin responder"

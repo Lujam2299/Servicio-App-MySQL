@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Reservation extends Model
 {
     use HasFactory;
-    protected $fillable = ['date', 'message', 'status'];
+    protected $fillable = ['nombre_sala','date', 'message', 'status'];
     protected $casts = [
         'status' => 'integer',
     ];

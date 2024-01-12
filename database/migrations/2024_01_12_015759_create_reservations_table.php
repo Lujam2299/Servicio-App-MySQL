@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('reservations', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre_sala');
             $table->date('date');
-            $table->text('message');
+            $table->text('message')->nullable();
             $table->tinyInteger('status')->default(1); // 0: Rechazada, 1: Sin Responder, 2: Aceptada
             $table->timestamps();
         });
