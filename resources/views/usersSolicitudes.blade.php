@@ -35,7 +35,7 @@
             </div>
             <nav class="mt-10 px-6 ">
               <a
-                class="mt-3 flex items-center py-2 px-4 text-gray-700 bg-gray-200 rounded-md dark:bg-gray-700 dark:text-gray-200"
+                class="mt-3 flex items-center py-2 px-4 text-gray-600 rounded-md dark:text-gray-400"
                 href="{{route("user.main")}}"
               >
 
@@ -45,7 +45,7 @@
 
                 <span class="mx-4 font-medium">Configuraciones</span>
               </a>
-              <a class="mt-3 flex items-center py-2 px-4 text-gray-600 rounded-md dark:text-gray-400" href="{{route("user.solicitudes")}}">
+              <a class="mt-3 flex items-center py-2 px-4 text-gray-700 rounded-md dark:bg-gray-700 dark:text-gray-200" href="{{route("user.solicitudes")}}">
 
                 <span class="mx-4 font-medium">Mis solicitudes</span>
               </a>
@@ -59,6 +59,38 @@
               <div class="flex flex-col mt-6">
                 <div class="flex flex-col mt-4">
                     <p class="font-semibold text-gray-700 dark:text-gray-200">Aquí se mostrarán tus solicitudes que hayas realizado.</p>
+                    <br>
+                    <table >
+                        <thead class="text-2xl font-semibold text-gray-700 dark:text-gray-200">
+                            <tr>
+                                <th>No.</th>
+                                <th>Sala</th>
+                                <th>Fecha p/ Reservación</th>
+                                <th>Estado</th>
+                                <th>Especificaciones</th>
+
+                            </tr>
+                        </thead>
+                        <tbody class="text-1xl  text-gray-700 dark:text-gray-200">
+                            @foreach($reservations as $reservation)
+                                <tr>
+                                    <td class="text-center">{{ $reservation->id }}</td>
+                                    <td class="text-center">{{ $reservation->nombre_sala}}
+                                    <td>{{ $reservation->date}}</td>
+                                    <td>
+                                        @if($reservation->status == 0)
+                                            Rechazada
+                                        @elseif($reservation->status == 1)
+                                            En revisión
+                                        @else($reservation->status == 2)
+                                            Aceptada
+                                        @endif
+                                    </td>
+                                    <td>{{ $reservation->message}}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
                 </div>
               </div>
             </div>

@@ -35,13 +35,13 @@
             </div>
             <nav class="mt-10 px-6 ">
               <a
-                class="mt-3 flex items-center py-2 px-4 text-gray-700 bg-gray-200 rounded-md dark:bg-gray-700 dark:text-gray-200"
+                class="mt-3 flex items-center py-2 px-4 text-gray-600 rounded-md dark:text-gray-400"
                 href="{{route("user.main")}}"
               >
 
                 <span class="mx-4 font-medium">Inicio</span>
               </a>
-              <a class="mt-3 flex items-center py-2 px-4 text-gray-600 rounded-md dark:text-gray-400" href="{{route("user.configuration")}}">
+              <a class="mt-3 flex items-center py-2 px-4 text-gray-700 bg-gray-200 rounded-md dark:bg-gray-700 dark:text-gray-200" href="{{route("user.configuration")}}">
 
                 <span class="mx-4 font-medium">Configuraciones</span>
               </a>
