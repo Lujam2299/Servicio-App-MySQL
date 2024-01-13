@@ -32,6 +32,7 @@ Route::post("/login/admin", [AuthController::class, "admin"])->name("auth.admin.
 Route::post("/login/user", [AuthController::class, "userLogin"])->name("auth.user.store");
 
 Route::get("/admin", [AdminController::class, "index"])->name("admin.index");
+Route::get("/admin/solicitudes", [AdminController::class, "showReservations"])->name("admin.solicitudes");
 
 Route::get("/register", [RegisterController::class, "index"])->name("register.index");
 Route::post("/register", [AdminRegisterController::class, "store"])->name("register.store");
@@ -56,4 +57,5 @@ Route::post('/admin/create-user', [RegisterController::class, 'store'])->name('a
 
 Route::post('/reservations/store', [ReservationsController::class, 'store'])->name('reservations.store');
 Route::get('/dashboard/reservation', [UserDashboardController::class, 'reservationSuccessful'])->name('user.reservation');
+
 

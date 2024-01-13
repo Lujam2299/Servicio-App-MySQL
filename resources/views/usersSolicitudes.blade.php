@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="/images/icon.svg" type="image/x-icon">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 
     @vite('resources/css/app.css')
     <title>Servicio-App</title>
@@ -17,7 +18,7 @@
 </head>
 <body>
     <div class="flex flex-col h-screen bg-gray-100 dark:bg-gray-900">
-        <header class="flex items-center justify-between px-6 py-4 bg-white shadow-md dark:bg-gray-800">
+        <header class="flex items-center justify-between px-6 py-4  shadow-md dark:bg-gray-800">
             <div class="text-2xl font-semibold text-gray-700 dark:text-gray-200">Panel de Reservaciones</div>
             <div class="flex items-center space-x-3">
             <span class="text-gray-700 dark:text-gray-200">Hola, Usuario</span>
@@ -27,7 +28,7 @@
             </div>
         </header>
         <main class="flex flex-1 overflow-auto">
-          <nav class="flex flex-col bg-white shadow-lg dark:bg-gray-800 w-64">
+          <nav class="flex flex-col  shadow-lg dark:bg-gray-800 w-64">
             <div class="flex items-center justify-center mt-8">
               <div class="flex items-center">
                 <span class="text-gray-600 dark:text-gray-400 text-2xl font-semibold">Tablero</span>
@@ -64,8 +65,8 @@
                 <div class="flex flex-col mt-4">
                     <p class="font-semibold text-gray-700 dark:text-gray-200">Aquí se mostrarán tus solicitudes que hayas realizado.</p>
                     <br>
-                    <table >
-                        <thead class="text-2xl font-semibold text-gray-700 dark:text-gray-200">
+                    <table class="table table-dark table-striped">
+                        <thead class="text-1xl font-semibold text-gray-700 dark:text-gray-200">
                             <tr>
                                 <th>No.</th>
                                 <th>Sala</th>
