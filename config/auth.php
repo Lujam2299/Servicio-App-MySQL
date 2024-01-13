@@ -45,6 +45,11 @@ return [
             'driver' => 'session',
             'provider' => 'admins', // Asegúrate de tener este proveedor definido
         ],
+        'user' => [
+            'driver' => 'session',
+            'provider' => 'users',
+        ],
+
     ],
 
     /*
@@ -79,6 +84,7 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\Admin::class,
         ],
+
     ],
 
     /*

@@ -12,6 +12,9 @@
   method="POST"
   >
   @csrf
+  @if (session('status'))
+    <span class="text-red-500 text-xs">{{session('status')}}  </span>
+  @endif
   <label class="block text-lg font-medium text-blue-700" for="email">
     Correo electrónico
   </label>
