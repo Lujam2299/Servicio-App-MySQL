@@ -15,7 +15,7 @@
   <label class="block text-lg font-medium text-blue-700" for="controlNumber">
     Número de control
   </label>
-  <Input class="mt-2 mb-4 border-blue-300 p-2 w-full rounded-md" id="controlNumber" placeholder="19690001" type="number" min="1" max="8"/>
+  <Input class="mt-2 mb-4 border-blue-300 p-2 w-full rounded-md" id="controlNumber" placeholder="19690001" type="text"/>
   <label class="block text-lg font-medium text-blue-700" for="password">
     Contraseña
   </label>
