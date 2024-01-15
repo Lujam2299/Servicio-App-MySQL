@@ -9,6 +9,7 @@ use App\Http\Controllers\home\HomeController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\UserDashboardController;
 use App\Http\Controllers\ReservationsController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,8 +29,10 @@ Route::get("/login/docente", [AuthController::class, "docenteIndex"])->name("aut
 Route::get("/login/admin", [AuthController::class, "adminIndex"])->name("auth.admin");
 
 Route::post("/login/admin", [AuthController::class, "admin"])->name("auth.admin.store");
+Route::post("/login/user", [AuthController::class, "userLogin"])->name("auth.user.store");
 
 Route::get("/admin", [AdminController::class, "index"])->name("admin.index");
+Route::get("/admin/solicitudes", [AdminController::class, "showReservations"])->name("admin.solicitudes");
 
 Route::get("/register", [RegisterController::class, "index"])->name("register.index");
 Route::post("/register", [AdminRegisterController::class, "store"])->name("register.store");
@@ -51,4 +54,8 @@ Route::post('/admin/create-user', [RegisterController::class, 'store'])->name('a
 
 Route::get('/admin/create-user', [CreateUserController::class, 'index'])->name('admin.create-user');
 Route::post('/admin/create-user', [RegisterController::class, 'store'])->name('admin.create-user.store');
+
+Route::post('/reservations/store', [ReservationsController::class, 'store'])->name('reservations.store');
+Route::get('/dashboard/reservation', [UserDashboardController::class, 'reservationSuccessful'])->name('user.reservation');
+
 

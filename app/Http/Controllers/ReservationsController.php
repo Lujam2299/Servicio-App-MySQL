@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
+use App\Models\Reservation;
+use Illuminate\Support\Facades\Auth;
+
 
 class ReservationsController extends Controller
 {
@@ -17,5 +19,27 @@ class ReservationsController extends Controller
     public function exdirectoresSchedule()
     {
         return view('/reservations/exdirectoresForm');
+    }
+
+
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'nombre_sala' => 'required|string',
+            'reservation_date' => 'required|date',
+            'reservation_message' => 'nullable|string',
+        ]);
+        $userEmail = Auth::user()->email;
+
+        Reservation::create([
+            'email' => $userEmail,
+            'nombre_sala' => $request->input('nombre_sala'),
+            'date' => $request->input('reservation_date'),
+            'message' => $request->input('reservation_message'),
+            'status' => 1, // Estado "sin responder"
+        ]);
+
+        return redirect()->route('user.reservation')->with('success', 'Reserva realizada con éxito');
     }
 }
